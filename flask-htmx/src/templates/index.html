@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs do Robô</title>
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',  filename='estilo.css') }}">
+</head>
+<body>
+    <main>
+        <h1>O robô está conectado!</h1>
+        <div class="background">
+            <h2>Preencha o formulário</h2>
+        </div>
+        <form action="/mover" method="post">
+            <label for="x">X:</label><br>
+            <input type="text" id="x" name="x"><br>
+            
+            <label for="y">Y:</label><br>
+            <input type="text" id="y" name="y"><br>
+            
+            <label for="z">Z:</label><br>
+            <input type="text" id="z" name="z"><br>
+
+            <label for="r">Rotação:</label><br>
+            <input type="text" id="r" name="r"><br>
+            
+            <button type="submit">Mover</button>
+        </form>
+
+        <!-- Botão para apagar o banco de dados -->
+        <button id="apagarBanco" hx-post="/apagar-banco" class="botao-apagar">Apagar Banco de Dados</button>
+
+        <!-- Formulário para atualizar o log -->
+        <form id="atualizarLogForm" hx-post="/atualizar-banco">
+            <label for="log_id">ID do Log:</label><br>
+            <input type="text" id="log_id" name="log_id" required><br>
+            <label for="new_log_text">Novo Texto do Log:</label><br>
+            <input type="text" id="new_log_text" name="new_log_text" required><br>
+            <button type="submit">Atualizar Log</button>
+        </form>
+        
+    </main>
+    <div hx-get="http://10.150.2.173:8000/logs" hx-trigger="load once"></div>
+</body>
+</html>
