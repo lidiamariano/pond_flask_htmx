@@ -2,12 +2,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: pink;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #484848;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h1 {
-    text-align: center;
-    color: pink; 
+    color: #333;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
+li {
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+li:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+/* Add some spacing between list items */
+li + li {
+    margin-top: 10px;
+}
