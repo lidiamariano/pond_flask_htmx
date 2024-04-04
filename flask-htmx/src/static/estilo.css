@@ -1,16 +1,74 @@
-h1 {
-    color: pink
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
-.background{
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
     background-color: pink;
-    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #484848;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(168, 168, 168);
 }
 
 h2 {
-    color: white;
+    color: pink;
 }
 
-.x {
-    width: auto;
+h3 {
+    color: pink;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(252, 234, 237);
+    color: #403939;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #bc79ca;
+}
+
+.botao-apagar {
+    margin-top: 20px;
+    background-color: rgb(252, 234, 237);
+}
+
+.botao-apagar:hover {
+    background-color: #bc79ca;
+}
+
+.background {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }

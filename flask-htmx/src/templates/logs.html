@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="{{ url_for('static',  filename='logs.css') }}">
 </head>
 <body>
-    <h1>Registros de Logs</h1>
-    <ul>
-        {% for log in logs %}
-            <li>{{ log['log'] }}</li>
-        {% endfor %}
-    </ul>
+    <main>
+        <div class="title">
+            <h1>Registros de Logs</h1>
+        </div>
+        <ul>
+            {% for log in logs %}
+                <li>{{ log['log'] }}</li>
+            {% endfor %}
+        </ul>
+    </main>
 </body>
 </html>
